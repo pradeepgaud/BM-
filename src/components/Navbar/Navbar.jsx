@@ -120,6 +120,7 @@ export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState({});
   const location = useLocation();
+  const [isMegaOpen, setIsMegaOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     const next = !mobileMenuOpen;
@@ -310,21 +311,132 @@ export default function Navbar() {
                       </ul>
                     </li>
 
-                    {/* Services Dropdown */}
-                    <li className="dropdown">
-                      <Link to="#">Services</Link>
-                      <ul>
-                        <li>
-                          <Link to="/services" onClick={closeMobileMenu}>
-                            Services List
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/service-details" onClick={closeMobileMenu}>
-                            Services Details
-                          </Link>
-                        </li>
-                      </ul>
+                    {/* Services Mega Dropdown */}
+                    <li
+                      className={`dropdown has-mega ${isMegaOpen ? "active" : ""}`}
+                      onMouseEnter={() => setIsMegaOpen(true)}
+                      onMouseLeave={() => setIsMegaOpen(false)}
+                    >
+                      <Link
+                        to="/services"
+                        onClick={() => setIsMegaOpen(false)} // 🔥 click pe close
+                      >
+                        Services
+                      </Link>
+
+                      <div className={`mega-menu ${isMegaOpen ? "show" : ""}`}>
+                        <div className="mega-container">
+                          <div className="mega-column">
+                            <h4>
+                              <Link to="/web-development">Web Development</Link>
+                            </h4>
+                            <ul>
+                              <li>
+                                <Link to="#">Wordpress Website</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Woocommerce Website</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Shopify Website</Link>
+                              </li>
+                              <li>
+                                <Link to="#">React Development</Link>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div className="mega-column">
+                            <h4>Ads And Campaigns</h4>
+                            <ul>
+                              <li>
+                                <Link to="#">Google Ads</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Facebook / Instagram Ads</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Linkedin Ads</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Quora Ads</Link>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div className="mega-column">
+                            <h4>Social Media Management</h4>
+                            <ul>
+                              <li>
+                                <Link to="#">Brand Awareness</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Social Media Engagement</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Social Media Posting</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Social Media Boosting</Link>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div className="mega-column">
+                            <h4>UI/UX And Audits</h4>
+                            <ul>
+                              <li>
+                                <Link to="#">Custom Web Design</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Corporate Branding</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Mobile App Design</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Product Design</Link>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div className="mega-column">
+                            <h4>SEO Optimizing</h4>
+                            <ul>
+                              <li>
+                                <Link to="#">Organic Traffic</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Genuine Inquiries</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Mobile Search</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Local Search Dominance</Link>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div className="mega-column">
+                            <h4>Ecommerce Management</h4>
+                            <ul>
+                              <li>
+                                <Link to="#">Amazon Management</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Flipkart Management</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Shopsy Management</Link>
+                              </li>
+                              <li>
+                                <Link to="#">Snapdeal Management</Link>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </li>
 
                     {/* News Dropdown */}
@@ -500,7 +612,7 @@ export default function Navbar() {
               {/* Services */}
               <li className="dropdown">
                 <div className="mob-nav-row">
-                  <Link to="#" onClick={(e) => e.preventDefault()}>
+                  <Link to="/services" onClick={(e) => e.preventDefault()}>
                     Services
                   </Link>
                   <span
@@ -654,7 +766,7 @@ export default function Navbar() {
                         <Link to="#">Pages</Link>
                       </li>
                       <li className="dropdown">
-                        <Link to="#">Services</Link>
+                        <Link to="/services">Services</Link>
                       </li>
                       <li className="dropdown">
                         <Link to="#">News</Link>

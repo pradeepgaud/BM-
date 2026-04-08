@@ -1,5 +1,4 @@
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
+// import Footer from "../../components/Footer/Footer";
 import Hero from "../../components/Hero/Hero";
 import Feature from "../../components/Feature/Feature";
 import AboutSection from "../../components/AboutSection/AboutSection";
@@ -16,12 +15,12 @@ import BrandSection from "../../components/BrandSection/BrandSection";
 import AwardSection from "../../components/AwardSection/AwardSection";
 import ContactSection from "../../components/ContactSection/ContactSection";
 import NewsSection from "../../components/NewsSection/NewsSection";
-import Navbar from "../../components/Navbar/Navbar";
+// import Navbar from "../../components/Navbar/Navbar";
 
 const Home = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <Header /> */}
       <Hero />
       <Feature />
@@ -39,7 +38,7 @@ const Home = () => {
       <AwardSection />
       <ContactSection />
       <NewsSection />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

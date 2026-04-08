@@ -1,0 +1,39 @@
+// import React from 'react'
+
+// const AboutPageHero = () => {
+//   return (
+//     <div>AboutPageHero</div>
+//   )
+// }
+
+// export default AboutPageHero
+
+import React from "react";
+import { Link } from "react-router-dom";
+import pageTitleBg from "../../assets/images/background/page-title.jpg";
+
+const AboutPageHero = ({ title = "About Us" }) => {
+  return (
+    <section
+      className="page-title"
+      style={{
+        backgroundImage: `url(${pageTitleBg})`,
+      }}
+    >
+      <div className="auto-container">
+        <div className="title-outer text-center">
+          <h1 className="title">{title}</h1>
+
+          <ul className="page-breadcrumb">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>{title}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutPageHero;

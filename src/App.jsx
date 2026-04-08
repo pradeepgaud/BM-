@@ -13,6 +13,11 @@ import Home from "./pages/Home/Home";
 import Preloader from "./components/Preloader/Preloader";
 import BackToTop from "./components/BackToTop/BackToTop";
 import Cursor from "./components/Cursor/Cursor";
+import Navbar from "../src/components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import About from "./pages/About/About";
+import Services from "./pages/Services/Services";
+import ServiceDetails from "./components/ServicePage/ServiceDetails";
 
 function App() {
   // AOS INIT (Animation)
@@ -30,10 +35,16 @@ function App() {
       <Cursor />
       <BrowserRouter>
         <Preloader />
+
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/service-details" element={<ServiceDetails />} />
         </Routes>
 
+        <Footer />
         <BackToTop />
       </BrowserRouter>
     </>
