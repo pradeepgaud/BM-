@@ -21011,3 +21011,23 @@ body {
 .rotate-circle {
   animation: rotateCircle 20s linear infinite;
 }
+
+/* serveric card pages top to buttom spacing  */
+.service-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.services-details {
+  margin-top: 120px;
+}
+
+/* development .jsx images issue fix  */
+
+/*  */
+
+.tm-boxed-layout .page-wrapper {
+  overflow: visible !important;
+}

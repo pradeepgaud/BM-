@@ -17,7 +17,9 @@ import Navbar from "../src/components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import About from "./pages/About/About";
 import Services from "./pages/Services/Services";
+import WebDevelopment from "./pages/Web Development/WebDevelopment";
 import ServiceDetails from "./components/ServicePage/ServiceDetails";
+import ReactDetails from "./pages/Web Development/ReactDetails";
 
 function App() {
   // AOS INIT (Animation)
@@ -42,6 +44,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/service-details" element={<ServiceDetails />} />
+          <Route path="/web-development" element={<WebDevelopment />} />
+          <Route path="/react" element={<ReactDetails />} />
         </Routes>
 
         <Footer />

@@ -15,6 +15,7 @@ import BrandSection from "../../components/BrandSection/BrandSection";
 import AwardSection from "../../components/AwardSection/AwardSection";
 import ContactSection from "../../components/ContactSection/ContactSection";
 import NewsSection from "../../components/NewsSection/NewsSection";
+import ClientForm from "../../components/contactfrom/ClientForm";
 // import Navbar from "../../components/Navbar/Navbar";
 
 const Home = () => {
@@ -38,6 +39,7 @@ const Home = () => {
       <AwardSection />
       <ContactSection />
       <NewsSection />
+      <ClientForm />
       {/* <Footer /> */}
     </>
   );

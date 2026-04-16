@@ -133,6 +133,9 @@ export default function Navbar() {
     }
   };
 
+  const handleMegaClose = () => {
+    setIsMegaOpen(false);
+  };
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
     document.body.classList.remove("mobile-menu-visible");
@@ -147,6 +150,7 @@ export default function Navbar() {
 
   useEffect(() => {
     closeMobileMenu();
+    setIsMegaOpen(false);
   }, [location]);
 
   useEffect(() => {
@@ -328,11 +332,21 @@ export default function Navbar() {
                         <div className="mega-container">
                           <div className="mega-column">
                             <h4>
-                              <Link to="/web-development">Web Development</Link>
+                              <Link
+                                to="/web-development"
+                                onClick={handleMegaClose}
+                              >
+                                Web Development
+                              </Link>
                             </h4>
                             <ul>
                               <li>
-                                <Link to="#">Wordpress Website</Link>
+                                <Link
+                                  to="/wordpress"
+                                  onClick={() => setIsMegaOpen(false)}
+                                >
+                                  Wordpress Website
+                                </Link>
                               </li>
                               <li>
                                 <Link to="#">Woocommerce Website</Link>
