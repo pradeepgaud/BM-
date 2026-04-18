@@ -121,8 +121,8 @@ const PremiumPortfolio = () => {
         }
 
         .ptf-title {
-          font-size: clamp(32px, 5vw, 64px);
-          font-weight: var(--h1-font-weight);
+
+          font-weight: var(--h3-font-weight);
           color: var(--headings-color);
           margin: 0;
           letter-spacing: -1px;
@@ -317,7 +317,7 @@ const PremiumPortfolio = () => {
       <section className="ptf-section">
         <div className="ptf-header">
           <span className="ptf-subtitle-tag">Portfolio</span>
-          <h2 className="ptf-title">Creative Archive</h2>
+          <h3 className="ptf-title">Creative Archive</h3>
         </div>
 
         <div

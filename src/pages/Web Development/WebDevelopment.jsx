@@ -136,7 +136,7 @@ const WebDevelopment = () => {
 
   const services = [
     { name: "React Development", path: "/react" },
-    { name: "Shopify Website", path: "/shopify" },
+    { name: "Shopify Website", path: "/react-two" },
     { name: "Wordpress Website", path: "/wordpress" },
     { name: "Woocommerce Website", path: "/woocommerce" },
     { name: "PHP Development", path: "/php" },

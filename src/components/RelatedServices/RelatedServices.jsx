@@ -131,10 +131,10 @@ const RelatedServices = () => {
           opacity: 0.5;
         }
 
-        .services-section .section-title h2 {
+        .services-section .section-title h3 {
           font-family: var(--heading-font-family);
-          font-size: var(--h2-font-size);
-          font-weight: var(--h2-font-weight);
+          font-size: var(--h3-font-size);
+          font-weight: var(--h3-font-weight);
           color: var(--headings-color);
           line-height: var(--line-height-heading);
           margin-top: 10px;
@@ -337,7 +337,7 @@ const RelatedServices = () => {
         {/* Section Header */}
         <div className="section-title text-center">
           <div className="eyebrow">Expertise</div>
-          <h2>Our Core Services</h2>
+          <h3>Our Core Services</h3>
           <div className="title-line"></div>
         </div>
 

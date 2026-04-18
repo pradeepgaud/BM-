@@ -20,6 +20,7 @@ import Services from "./pages/Services/Services";
 import WebDevelopment from "./pages/Web Development/WebDevelopment";
 import ServiceDetails from "./components/ServicePage/ServiceDetails";
 import ReactDetails from "./pages/Web Development/ReactDetails";
+import ReactDetailsTwo from "./pages/Web Development/ReactDetailsTwo";
 
 function App() {
   // AOS INIT (Animation)
@@ -46,6 +47,7 @@ function App() {
           <Route path="/service-details" element={<ServiceDetails />} />
           <Route path="/web-development" element={<WebDevelopment />} />
           <Route path="/react" element={<ReactDetails />} />
+          <Route path="/react-two" element={<ReactDetailsTwo />} />
         </Routes>
 
         <Footer />
